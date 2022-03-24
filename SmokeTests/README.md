@@ -14,5 +14,5 @@ Nunit
 - Can add more negative scenarios
 - Database verification 
 
-
+# Ted Cinemas Test cases - These cases are added in an excel sheet in the solution folder
 

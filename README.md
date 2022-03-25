@@ -4,17 +4,17 @@ An Automation Framework which can test all the methods provided in https://reqre
 **Verify that Lindsay Ferguson is a user by querying “List Users”**
 This quesntion is answered in GetUser.feature
 ## Tools used
--C#
--Specflow
--RestSharp
--Nunit
+- C#
+- Specflow
+- RestSharp
+- Nunit
 ## Setup
 - The above mentioned URl is present in a json file  config.json at the root of the project folder. 
 For example:{ "BASE_URL":"http://localhost:8080" }
 - The feature files contain data table which can be easily modified
 
 ## Future improvements
-- Data sourced externally data source such as csv, excel etc. 
+- Data sourced externally such as csv, excel etc. 
 - Adding reports like extent report etc.
 - Can add more negative scenarios
 - Database verification 

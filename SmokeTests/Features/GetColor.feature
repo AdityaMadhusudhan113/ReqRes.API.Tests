@@ -9,9 +9,8 @@ Scenario: Get All Colors
 
 Scenario: Get Single Color
 	Given API is "/api/unknown/"
-	When Get Request is performed for the details 
-		| Id |
-		| 2  |
+	And Record Id is "2"
+	When Get Request is Performed 
 	Then Response code is 200
 	And Response contains the valid color details
 	| Name         | Year      | Code       | Pantone_Value |
@@ -20,8 +19,7 @@ Scenario: Get Single Color
 Scenario: Get Single Colour Not Found
 
 	Given API is "/api/unknown/"
-	When Get Request is performed for the details
-		| Id |
-		| 23 |
+	And Record Id is "23"
+	When Get Request is Performed 
 	Then Response code is 404
 

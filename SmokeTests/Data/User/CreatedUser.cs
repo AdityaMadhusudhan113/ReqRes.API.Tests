@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmokeTests.Data.User
 {
-    public partial class CreatedUserResponse
+    public partial class CreatedUser
     {
         public long Id { get; set; }
         public DateTimeOffset CreatedAt { get; set; }

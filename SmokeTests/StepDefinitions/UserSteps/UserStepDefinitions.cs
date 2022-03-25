@@ -13,14 +13,18 @@ using TechTalk.SpecFlow.Assist;
 namespace SmokeTests.StepDefinitions
 {
     [Binding]
-    public  class GetUserStepDefinitions :BaseStepDefinitions
+    public  class UserStepDefinitions :BaseStepDefinitions
     {
       
-        public GetUserStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
+        public UserStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
         {
            
         }
 
+        /// <summary>
+        /// The method validates the response with the user details
+        /// </summary>
+        /// <param name="table"></param>
         [Then(@"Response contains the valid user details")]
         public void ThenResponseContainsTheValidUserDetails(Table table)
         {
@@ -42,8 +46,12 @@ namespace SmokeTests.StepDefinitions
             Assert.AreEqual(dictionary.Avatar, users.Avatar.ToString(), "User Email different : Expected : " + dictionary.Avatar + " Actual :" + users.Avatar);
 
         }
-       
 
+       
+        /// <summary>
+        /// The method validates the response for "First name and last name"
+        /// </summary>
+        /// <param name="table"></param>
         [Then(@"Response has the data")]
         public void ThenResponseHasTheData(Table table)
         {

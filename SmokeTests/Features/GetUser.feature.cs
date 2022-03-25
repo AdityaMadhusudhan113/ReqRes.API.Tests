@@ -152,17 +152,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
  testRunner.Then("Response has \"6\" records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table6.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "First_Name",
                             "Lindsay"});
-                table6.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Last_Name",
                             "Ferguson"});
 #line 16
- testRunner.And("Response has the data", ((string)(null)), table6, "And ");
+ testRunner.And("Response has the data", ((string)(null)), table3, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -198,33 +198,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 22
  testRunner.Given("API is \"/api/users/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table7.AddRow(new string[] {
-                            "2"});
 #line 23
- testRunner.When("Get Request is performed for the details", ((string)(null)), table7, "When ");
+ testRunner.And("Record Id is \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 24
+ testRunner.When("Get Request is Performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 25
  testRunner.Then("Response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table8.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Email",
                             "janet.weaver@reqres.in"});
-                table8.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "First_Name",
                             "Janet"});
-                table8.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Last_Name",
                             "Weaver"});
-                table8.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Avatar",
                             "https://reqres.in/img/faces/2-image.jpg"});
-#line 27
- testRunner.And("Response contains the valid user details", ((string)(null)), table8, "And ");
+#line 26
+ testRunner.And("Response contains the valid user details", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -237,7 +236,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Single User Not Found", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 35
+#line 34
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -257,17 +256,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 37
+#line 36
  testRunner.Given("API is \"/api/users/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table9.AddRow(new string[] {
-                            "23"});
-#line 38
- testRunner.When("Get Request is performed for the details", ((string)(null)), table9, "When ");
+#line 37
+ testRunner.And("Record Id is \"23\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 41
+#line 38
+ testRunner.When("Get Request is Performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 39
  testRunner.Then("Response code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

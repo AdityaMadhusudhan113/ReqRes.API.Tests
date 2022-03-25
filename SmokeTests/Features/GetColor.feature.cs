@@ -146,28 +146,27 @@ this.ScenarioInitialize(scenarioInfo);
 #line 11
  testRunner.Given("API is \"/api/unknown/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table3.AddRow(new string[] {
-                            "2"});
 #line 12
- testRunner.When("Get Request is performed for the details", ((string)(null)), table3, "When ");
+ testRunner.And("Record Id is \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 15
+#line 13
+ testRunner.When("Get Request is Performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 14
  testRunner.Then("Response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Name",
                             "Year",
                             "Code",
                             "Pantone_Value"});
-                table4.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "fuchsia rose",
                             "2001",
                             "#C74375",
                             "17-2031"});
-#line 16
- testRunner.And("Response contains the valid color details", ((string)(null)), table4, "And ");
+#line 15
+ testRunner.And("Response contains the valid color details", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -180,7 +179,7 @@ this.ScenarioInitialize(scenarioInfo);
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get Single Colour Not Found", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
+#line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -200,17 +199,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 22
+#line 21
  testRunner.Given("API is \"/api/unknown/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table5.AddRow(new string[] {
-                            "23"});
-#line 23
- testRunner.When("Get Request is performed for the details", ((string)(null)), table5, "When ");
+#line 22
+ testRunner.And("Record Id is \"23\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 23
+ testRunner.When("Get Request is Performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
  testRunner.Then("Response code is 404", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

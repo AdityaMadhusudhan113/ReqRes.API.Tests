@@ -103,23 +103,19 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("API is \"/api/users\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table18.AddRow(new string[] {
-                            "18"});
 #line 5
- testRunner.When("The user data to be updated has", ((string)(null)), table18, "When ");
+ testRunner.When("The user data to be updated has Id \"18\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "name",
                             "job"});
-                table19.AddRow(new string[] {
+                table13.AddRow(new string[] {
                             "Norman Bates",
                             "Techie"});
-#line 8
- testRunner.And("The user data to be updated is", ((string)(null)), table19, "And ");
+#line 6
+ testRunner.And("The user data to be updated is", ((string)(null)), table13, "And ");
 #line hidden
-#line 11
+#line 9
  testRunner.Then("Response code is 200", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

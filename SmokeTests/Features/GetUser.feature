@@ -20,9 +20,8 @@ Scenario: Get User Verify Name
 
 Scenario: Get Single User
 	Given API is "/api/users/"
-	When Get Request is performed for the details
-		| Id |
-		| 2  |
+	And Record Id is "2"
+	When Get Request is Performed 
 	Then Response code is 200
 	And Response contains the valid user details
 	| Field      | Value                                   |
@@ -35,7 +34,6 @@ Scenario: Get Single User
 Scenario: Get Single User Not Found
 
 	Given API is "/api/users/"
-	When Get Request is performed for the details
-		| Id |
-		| 23 |
+	And Record Id is "23"
+	When Get Request is Performed 
 	Then Response code is 404

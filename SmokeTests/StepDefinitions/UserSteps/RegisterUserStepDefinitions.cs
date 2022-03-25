@@ -9,16 +9,17 @@ using BoDi;
 namespace SmokeTests.StepDefinitions
 {
     [Binding]
-    public class PostStepDefinitions  : BaseStepDefinitions
+    public class RegisterUserStepDefinitions  : BaseStepDefinitions
     {
    
-        public PostStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
+        public RegisterUserStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
         {
           
         }
-        protected string requestUrl = "";
-
-
+        /// <summary>
+        /// The method instantiates the request body with the user details
+        /// </summary>
+        /// <param name="table"></param>
         [Given(@"The user data is")]
         public void GivenTheUserDataIs(Table table)
         {
@@ -26,12 +27,14 @@ namespace SmokeTests.StepDefinitions
             restUtil.requestBody = table;
         }
 
-
+        /// <summary>
+        /// The method validates if the user is created on current day
+        /// </summary>
         [Then(@"The user is created")]
         public void ThenTheUserIsCreated()
         {
             var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
-            var CreatedUser= JsonConvert.DeserializeObject<CreatedUserResponse>(restUtil.response.Content);
+            var CreatedUser= JsonConvert.DeserializeObject<CreatedUser>(restUtil.response.Content);
             Console.WriteLine("Created User Id : "+ CreatedUser.Id);
             Assert.AreNotEqual(CreatedUser.Id, 0,"User not created");
             Console.WriteLine("Created User Created Date : " + CreatedUser.CreatedAt);

@@ -1,6 +1,9 @@
 ﻿using BoDi;
+using Newtonsoft.Json;
 using NUnit.Framework;
 using RestSharp;
+using SmokeTests.Config;
+using SmokeTests.Data.User;
 using SmokeTests.Utilities;
 using System;
 using System.Collections.Generic;
@@ -11,17 +14,17 @@ using System.Threading.Tasks;
 namespace SmokeTests.StepDefinitions
 {
     [Binding]
-    public class GeneralStepDefinitions :BaseStepDefinitions
+    public class APIStepDefinitions :BaseStepDefinitions
     {
         
-        public GeneralStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
+        public APIStepDefinitions(IObjectContainer objectContainer) : base(objectContainer)
         {
            
         }
         [Given(@"API is ""(.*)""")]
         public void GivenAPIIs(string Url)
         {
-            var config = objectContainer.Resolve<Config.Settings>();
+            var config = objectContainer.Resolve<EnvConfig>();
             RestUtil restUtil = new RestUtil();
             var client=restUtil.SetUrl (config.BASE_URL, Url);
             objectContainer.RegisterInstanceAs<RestClient>(client, "RestClient");
@@ -45,7 +48,7 @@ namespace SmokeTests.StepDefinitions
         public void ThenResponseIsEmpty()
         {
             var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
-            Assert.AreEqual(restUtil.response.Content,"{}", "Response content is not empty");
+            Assert.IsTrue((restUtil.response.Content.Equals("{}") ||  String.IsNullOrEmpty(restUtil.response.Content)), "Response content is not empty");
         }
 
         [When(@"Post Request is performed")]
@@ -54,6 +57,38 @@ namespace SmokeTests.StepDefinitions
             var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
             restUtil.PostRequest();
         }
+
+        [When(@"Get Request is Performed")]
+        public void WhenGetRequestPerformed()
+        {
+        
+            var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
+            var user =objectContainer.Resolve<CreatedUser>( "Id");
+            if(user.Id == 0)
+            restUtil.GetRequest();
+            else
+            restUtil.GetRequest(user.Id.ToString());
+        }
+
+        [Given(@"Record Id is ""([^""]*)""")]
+        public void GivenRecordIdIs(string Id)
+        {
+            CreatedUser user = new CreatedUser();
+            user.Id = long.Parse(Id);
+            objectContainer.RegisterInstanceAs<CreatedUser>(user, "Id");
+        }
+
+        [Then(@"Response has ""([^""]*)"" records")]
+        public void ThenResponseHasRecords(string NumberOfUsers)
+        {
+            var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
+            UserList responseContent = JsonConvert.DeserializeObject<UserList>(restUtil.response.Content);
+            var users = responseContent.Data;
+            Console.WriteLine("Number of Records : " + users.Count);
+            Assert.AreEqual(Convert.ToInt32(NumberOfUsers), users.Count, "Number of Records are not as expected : " + NumberOfUsers);
+
+        }
+
 
     }
 }

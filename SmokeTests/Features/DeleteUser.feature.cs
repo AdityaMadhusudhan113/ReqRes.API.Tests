@@ -103,17 +103,13 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("API is \"/api/users/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Id"});
-                table2.AddRow(new string[] {
-                            "23"});
 #line 5
- testRunner.When("Delete Request is performed for the details", ((string)(null)), table2, "When ");
+ testRunner.When("Delete Request is performed for the Id \"23\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 6
  testRunner.Then("Response code is 204", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 9
+#line 7
  testRunner.And("Response is Empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }

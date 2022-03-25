@@ -13,14 +13,17 @@ using System.Threading.Tasks;
 namespace SmokeTests.StepDefinitions
 {
     [Binding]
-    public class GetColorStepDefinition : BaseStepDefinitions
+    public class ColorStepDefinition : BaseStepDefinitions
     {
        
-        public GetColorStepDefinition(IObjectContainer objectContainer) : base(objectContainer)
+        public ColorStepDefinition(IObjectContainer objectContainer) : base(objectContainer)
         {
             
         }
-
+        /// <summary>
+        /// The method validates the response based on the expected color data passed in the feature file
+        /// </summary>
+        /// <param name="table"></param>
         [Then(@"Response contains the valid color details")]
         public void ThenResponseContainsTheValidColorDetails(Table table)
         {

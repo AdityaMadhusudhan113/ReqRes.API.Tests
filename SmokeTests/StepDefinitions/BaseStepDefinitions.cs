@@ -12,7 +12,7 @@ namespace SmokeTests.StepDefinitions
     {
       
         protected IObjectContainer objectContainer;
-
+        
         protected BaseStepDefinitions(IObjectContainer objectContainer)
         {
             this.objectContainer = objectContainer;

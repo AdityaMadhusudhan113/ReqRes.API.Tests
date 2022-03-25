@@ -13,14 +13,18 @@ namespace SmokeTests.StepDefinitions
         {
             
         }
-        [When(@"Delete Request is performed for the details")]
-        public void WhenDeleteRequestIsPerformedForTheDetails(Table table)
+      
+        /// <summary>
+        /// The method sends a delete request for the record with id
+        /// </summary>
+        /// <param name="Id"></param>
+        [When(@"Delete Request is performed for the Id ""([^""]*)""")]
+        public void WhenDeleteRequestIsPerformedForTheId(string Id)
         {
             var restUtil = this.objectContainer.Resolve<RestUtil>("RestUtil");
-            var Id = table.Rows[0]["Id"];
-            restUtil.GetRequest(Id);
+            restUtil.DeleteRequest(Id);
         }
 
-        
+
     }
 }

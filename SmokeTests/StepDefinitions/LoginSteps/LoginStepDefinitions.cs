@@ -18,6 +18,10 @@ namespace SmokeTests.StepDefinitions
             
         }
 
+        /// <summary>
+        /// The method instantiates the requestbody with the table data defined as login user
+        /// </summary>
+        /// <param name="table"></param>
         [Given(@"The Login User data is")]
         public void GivenTheLoginDataIs(Table table)
         {
@@ -25,6 +29,10 @@ namespace SmokeTests.StepDefinitions
             var user = table.CreateInstance<LoginUser>();
             restUtil.requestBody =user;
         }
+
+        /// <summary>
+        /// The method validates the token is present in response
+        /// </summary>
         [Then(@"Response contains a token")]
         public void ThenResponseContainsAToken()
         {

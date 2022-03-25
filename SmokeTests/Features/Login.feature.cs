@@ -103,17 +103,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("API is \"/api/login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "value"});
-                table10.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "email",
                             "eve.holt@reqres.in"});
-                table10.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "password",
                             "cityslicka"});
 #line 5
- testRunner.And("The Login User data is", ((string)(null)), table10, "And ");
+ testRunner.And("The Login User data is", ((string)(null)), table5, "And ");
 #line hidden
 #line 9
  testRunner.When("Post Request is performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -158,17 +158,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.Given("API is \"/api/login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "value"});
-                table11.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "email",
                             "eve.holt@reqres.au"});
-                table11.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "password",
                             "cityslicka"});
 #line 15
- testRunner.And("The Login User data is", ((string)(null)), table11, "And ");
+ testRunner.And("The Login User data is", ((string)(null)), table6, "And ");
 #line hidden
 #line 19
  testRunner.When("Post Request is performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -210,14 +210,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 23
  testRunner.Given("API is \"/api/login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "value"});
-                table12.AddRow(new string[] {
+                table7.AddRow(new string[] {
                             "password",
                             "cityslicka"});
 #line 24
- testRunner.And("The Login User data is", ((string)(null)), table12, "And ");
+ testRunner.And("The Login User data is", ((string)(null)), table7, "And ");
 #line hidden
 #line 27
  testRunner.When("Post Request is performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -259,14 +259,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 31
  testRunner.Given("API is \"/api/login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "value"});
-                table13.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "email",
                             "eve.holt@reqres.in"});
 #line 32
- testRunner.And("The Login User data is", ((string)(null)), table13, "And ");
+ testRunner.And("The Login User data is", ((string)(null)), table8, "And ");
 #line hidden
 #line 35
  testRunner.When("Post Request is performed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");

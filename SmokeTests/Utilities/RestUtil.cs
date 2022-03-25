@@ -13,14 +13,14 @@ namespace SmokeTests.Utilities
     {
 
         public  RestResponse response; 
-        Settings config;
+        EnvConfig config;
         public  string requestUrl = "";
         public RestClient client;
         public Object requestBody;
 
         public RestUtil()
         {
-            config = new Settings();
+            config = new EnvConfig();
             client = new RestClient(config.BASE_URL);
         }
         public RestClient SetUrl(string baseUrl, string resourceUrl)

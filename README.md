@@ -18,6 +18,7 @@ For example:{ "BASE_URL":"http://localhost:8080" }
 - Adding reports like extent report etc.
 - Can add more negative scenarios
 - Database verification 
+- **Usage of Secret Manager to save and retrieve the password**
 
 ### Ted Cinemas Test cases 
 - These cases are added in an excel sheet in the solution folder

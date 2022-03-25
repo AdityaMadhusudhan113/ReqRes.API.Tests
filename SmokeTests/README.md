@@ -1,7 +1,7 @@
 ﻿## Description
 An Automation Framework which can test all the methods provided in https://reqres.in/
 
-**Verify that Lindsay Ferguson is a user by querying “List Users”. **
+**Verify that Lindsay Ferguson is a user by querying “List Users”**
 This quesntion is answered in GetUser.feature
 ## Tools used
 -C#

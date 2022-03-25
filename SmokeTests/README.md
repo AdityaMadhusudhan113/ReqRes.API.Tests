@@ -19,7 +19,7 @@ For example:{ "BASE_URL":"http://localhost:8080" }
 - Can add more negative scenarios
 - Database verification 
 
-# Ted Cinemas Test cases 
+### Ted Cinemas Test cases 
 - These cases are added in an excel sheet in the solution folder
 
 **For Third Party Payment Service Agreement**: 
